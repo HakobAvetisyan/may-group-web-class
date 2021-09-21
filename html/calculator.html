@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/calculator.css">
+        <title>CALCULATOR</title>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <input type="text" class="inputBox" id="inp">
+            <button class="btn" onclick="getItem('1')" >1</button> 
+            <button class="btn" onclick="getItem('2')" >2</button>
+            <button class="btn" onclick="getItem('3')" >3</button>
+            <button class="btn" onclick="getItem('/')" >/</button>
+            <button class="btn" onclick="getItem('4')" >4</button>
+            <button class="btn" onclick="getItem('5')" >5</button>
+            <button class="btn" onclick="getItem('6')" >6</button>
+            <button class="btn" onclick="getItem('*')" >X</button> 
+            <button class="btn" onclick="getItem('7')" >7</button>
+            <button class="btn" onclick="getItem('8')" >8</button>
+            <button class="btn" onclick="getItem('9')" >9</button>
+            <button class="btn" onclick="getItem('+')" >+</button>
+            <button class="btn" onclick="clearInput()" >C</button>
+            <button class="btn" onclick="getItem('0')" >0</button>
+            <button class="btn" onclick="calculateEval()" >=</button>
+            <button class="btn" onclick="getItem('-')" >-</button>
+        </div> 
+        <script>
+            function getItem(data){
+                document.getElementById("inp").value += data;
+            }
+            function calculateEval(){
+                let result = eval(document.getElementById("inp").value);
+                document.getElementById("inp").value = result;
+            }
+            function clearInput(){
+                document.getElementById("inp").value = '';
+                
+            }
+        </script>
+    </body>
+</html>
